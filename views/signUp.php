@@ -15,14 +15,14 @@
 <main class="container">
   <!-- não está puxando infos do styles.css -->
   <form class="form-container">
-    <div class="col-8">
+    <div class="col-10">
       <h3>Cadastre-se</h3>
       <div class="form-group">
         <div class="form-row">
-          <div class="col">
+          <div class="col-12 col-sm-6">
             <input type="text" class="form-control" placeholder="Nome">
           </div>
-          <div class="col">
+          <div class="col-12 col-sm-6">
             <input type="text" class="form-control" placeholder="Sobrenome">
           </div>
         </div>

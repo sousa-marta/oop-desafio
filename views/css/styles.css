@@ -13,9 +13,7 @@ header nav {
   color: black;
 }
 
-header a {
-  color: black;
-}
+header a {color: black;}
 
 .btn-signup :hover {
   color: darkviolet;
@@ -28,8 +26,10 @@ header a {
   display:flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
-  border: solid 1px gray;
+  margin-top: 8vh;
+  padding: 10vh 0;
+  border-radius: 25px;
+  background-color: #d0c7f1;
 }
 /*FIM CADASTRO*/
 
@@ -71,6 +71,4 @@ header a {
   transition: 0.3s;
 }
 
-#cardimg {
-  max-width: 100%;
-}
+#cardimg {max-width: 100%;}

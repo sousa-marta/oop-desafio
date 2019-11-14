@@ -20,20 +20,20 @@
       <div class="form-group">
         <div class="form-row">
           <div class="col-12 col-sm-6">
-            <input name="firstName" type="text" class="form-control" placeholder="Nome">
+            <input name="firstName" type="text" class="form-control" placeholder="Nome" required>
           </div>
           <div class="col-12 col-sm-6">
-            <input name="lastName" type="text" class="form-control" placeholder="Sobrenome">
+            <input name="lastName" type="text" class="form-control" placeholder="Sobrenome" required>
           </div>
         </div>
       </div>
       <div class="form-group">
         <label for="userId">Usuário</label>
-        <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Defina seu nome de usuário">
+        <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Defina seu nome de usuário" required>
       </div>
       <div class="form-group">
         <label for="userPass">Senha</label>
-        <input name="encPass" type="password" class="form-control" id="userPass" placeholder="Defina sua senha">
+        <input name="encPass" type="password" class="form-control" id="userPass" placeholder="Defina sua senha" required>
       </div>
       <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>

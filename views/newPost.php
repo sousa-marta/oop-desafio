@@ -16,12 +16,12 @@
 		<h1> Cadastro de novo Post </h1>
 		<form action="/oop-desafio/cadastrar-post" method="post" enctype="multipart/form-data">
 			<div class="form-group">
-				<label for="exampleFormControlFile1">Example file input</label>
-				<input type="file" class="form-control-file" name="img" id="exampleFormControlFile1">
+				<label for="image">Example file input</label>
+				<input type="file" class="form-control-file" name="image" id="image">
 			</div>
 			<div class="form-group">
-				<label for="descricao">Descrição</label>
-				<input type="text" class="form-control" id="descricao" name="descricao" placeholder="Insira uma descrição">
+				<label for="description">Descrição</label>
+				<input type="text" class="form-control" id="description" name="description" placeholder="Insira uma descrição">
 			</div>
 			<button type="submit" class="btn btn-success">Postar</button>
 		</form>

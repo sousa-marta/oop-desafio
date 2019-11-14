@@ -22,10 +22,10 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 	<main class="board">
 		<?php foreach($posts as $post): ?>
 			<div class="card mt-5">
-				<img id="cardimg" src="<?php echo $post->img; ?>" alt="Card image cap">
+				<img id="cardimg" src="<?php echo $post->image; ?>" alt="Card image cap">
 				<div class="card-body">
 					<p class="card-text">
-						<?php echo $post->descricao; ?>
+						<?php echo $post->description; ?>
 					</p>
 				</div>
 			</div>

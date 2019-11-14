@@ -36,14 +36,14 @@ class PostController {
   }
 
   private function cadastroPost(){
-    $descricao = $_POST['descricao'];
-    $nomeArquivo = $_FILES['img']['name'];
-    $linkTemp = $_FILES['img']['tmp_name'];
+    $description = $_POST['description'];
+    $nomeArquivo = $_FILES['image']['name'];
+    $linkTemp = $_FILES['image']['tmp_name'];
     $caminhoSalvar = "views/img/$nomeArquivo";
     move_uploaded_file($linkTemp,$caminhoSalvar);
 
     $post = new Post();
-    $resultado = $post->criarPost($caminhoSalvar,$descricao); //vai estar analisando um true or false
+    $resultado = $post->criarPost($caminhoSalvar,$description); //vai estar analisando um true or false
 
     if($resultado){
       header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir

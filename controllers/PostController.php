@@ -46,7 +46,7 @@ class PostController {
     $resultado = $post->criarPost($caminhoSalvar,$descricao); //vai estar analisando um true or false
 
     if($resultado){
-      header('Location:/oop-fake-insta/posts'); //mandando para a rota decidir para onde ir
+      header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir
     }else {
       echo "Deu erro";
     }

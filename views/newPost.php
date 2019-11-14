@@ -14,7 +14,7 @@
 	<main class="board">
 		
 		<h1> Cadastro de novo Post </h1>
-		<form action="/oop-fake-insta/cadastrar-post" method="post" enctype="multipart/form-data">
+		<form action="/oop-desafio/cadastrar-post" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="exampleFormControlFile1">Example file input</label>
 				<input type="file" class="form-control-file" name="img" id="exampleFormControlFile1">

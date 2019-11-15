@@ -12,7 +12,7 @@
 
 <?php include "views/includes/header.php"; ?>
 
-<main class="container">
+<main action="/oop-desafio/register-user" method="post" class="container">
   <!-- não está puxando infos do styles.css -->
   <form class="form-container">
     <div class="col-10">

@@ -15,5 +15,8 @@ class User extends Conexao {
       "username" => $username,
       "encPass" => $encPass]);
   }
+/* 
+  Função para pegar informações do usuário do banco de dados
+  public function getUser */
 
 }

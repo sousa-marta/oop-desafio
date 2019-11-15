@@ -28,6 +28,13 @@
       include "controllers/UserController.php";
       $controller = new UserController();
       $controller->acao($rotas);
+    break;
+
+    case "register-user":
+      include "controllers/UserController.php";
+      $controller = new UserController();
+      $controller->acao($rotas);
+    break;
   }
 
 ?>

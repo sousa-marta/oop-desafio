@@ -8,7 +8,8 @@ class User extends Conexao {
   public function addUser($firstName,$lastName,$username,$encPass){
 
     $db = parent::criarConexao();
-    $query = $db->prepare('INSERT INTO users(firstName,lastName,username,encPass) VALUES (:firstName, :lastName, :username, :encPass)');
+    $query = $db->prepare("INSERT INTO users (firstName,lastName,username,encPass) 
+                           VALUES (:firstName, :lastName, :username, :encPass)");
     return $query->execute([
       "firstName" => $firstName,
       "lastName" => $lastName,

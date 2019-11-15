@@ -4,10 +4,6 @@ include_once 'models/User.php';
 
 class UserController {
 
-  private function viewSignUp(){
-    include "views/signUp.php";
-  }
-  
   public function acao($rotas){
     switch($rotas){
       case "sign-up":
@@ -18,7 +14,11 @@ class UserController {
       break;
     }
   }
-
+  
+  private function viewSignUp(){
+    include "views/signUp.php";
+  }
+  
   private function registerUser(){
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -28,12 +28,12 @@ class UserController {
 
 /*     var_dump($encPass);
     exit; */
-
     
     $user = new User();
     $action = $user->addUser($firstName,$lastName,$username,$encPass);
     
     if($action){
+      // echo "Adicionado com sucesso";
       header('Location:/oop-desafio/posts'); 
     }else {
       echo "Não foi possível adicionar o usuário";

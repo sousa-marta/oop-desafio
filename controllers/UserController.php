@@ -1,5 +1,6 @@
 <?php
 
+include_once 'models/User.php';
 
 class UserController {
 
@@ -14,6 +15,7 @@ class UserController {
       break;
       case "register-user":
         $this->registerUser();
+      break;
     }
   }
 
@@ -22,9 +24,20 @@ class UserController {
     $lastName = $_POST['lastName'];
     $username = $_POST['username'];
     $encPass = password_hash($_POST['encPass'], PASSWORD_DEFAULT);
+    // $encPass = $_POST['encPass'];
+
+/*     var_dump($encPass);
+    exit; */
+
     
     $user = new User();
     $action = $user->addUser($firstName,$lastName,$username,$encPass);
+    
+    if($action){
+      header('Location:/oop-desafio/posts'); 
+    }else {
+      echo "Não foi possível adicionar o usuário";
+    }
 
   }
 

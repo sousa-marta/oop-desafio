@@ -12,9 +12,9 @@
 
 <?php include "views/includes/header.php"; ?>
 
-<main action="/oop-desafio/register-user" method="post" class="container">
+<main class="container">
   <!-- não está puxando infos do styles.css -->
-  <form class="form-container">
+  <form action="/oop-desafio/register-user" method="post" class="form-container">
     <div class="col-10">
       <h3>Cadastre-se</h3>
       <div class="form-group">

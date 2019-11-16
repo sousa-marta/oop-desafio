@@ -12,6 +12,9 @@ class UserController {
       case "register-user":
         $this->registerUser();
       break;
+      case "login-user":
+        $this->userLogin();
+      break;        
     }
   }
   
@@ -38,6 +41,11 @@ class UserController {
     }else {
       echo "Não foi possível adicionar o usuário";
     }
+  }
+
+  private function userLogin() {
+
+    // Colocar aqui validações de login
 
   }
 

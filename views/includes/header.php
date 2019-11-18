@@ -23,7 +23,7 @@
       <main class="modal-body">
         <form action="/oop-desafio/login-user" method="post">
           <div class="form-group">
-            <label for="username">E-mail</label>
+            <label for="username">Nome de Usuário</label>
             <input type="email" class="form-control"  name="username" id="username" placeholder="Insira seu nome de usuário" required>
           </div>
           <div class="form-group">

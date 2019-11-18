@@ -16,8 +16,15 @@ class User extends Conexao {
       "username" => $username,
       "encPass" => $encPass]);
   }
-/* 
-  Função para pegar informações do usuário do banco de dados
-  public function getUser */
+
+  // Função para pegar ID do usuário e conferir se username e senha conferem no banco de dados:
+  public function getUserID($username,$encPass){
+    $db = parent::criarConexao();
+    $query = $db->prepare("SELECT id FROM users WHERE username = ? and encPass = ?");
+    return $query->execute([$username,$encPass]);
+
+    //return se true, ótimo
+  }
+
 
 }

@@ -13,16 +13,16 @@
 <?php include "views/includes/header.php"; ?>
 
 <main class="container">
-  <form action="/oop-desafio/sign-in" method="post" class="form-container">
+  <form action="/oop-desafio/login-user" method="post" class="form-container">
     <div class="col-6">
       <h3>Login</h3>
       <div class="form-group">
         <label for="userId">Usuário</label>
-        <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Defina seu nome de usuário" required>
+        <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Usuário" required>
       </div>
       <div class="form-group">
         <label for="userPass">Senha</label>
-        <input name="encPass" type="password" class="form-control" id="userPass" placeholder="Defina sua senha" required>
+        <input name="userPass" type="password" class="form-control" id="userPass" placeholder="Senha" required>
       </div>
       <button type="submit" class="btn btn-primary">Logar</button>
     </div>

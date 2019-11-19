@@ -55,7 +55,7 @@ class UserController {
   //Método para Validação de Login:
   private function userLogin() {
     $username = $_POST['username'];
-    $encPass = password_hash($_POST['userPass'], PASSWORD_DEFAULT);
+    $encPass = $_POST['userPass'];
     
     //Checando com banco de dados, se ok, iniciar sessão:
     if($this->authenticate($username,$encPass)){
@@ -97,11 +97,9 @@ class UserController {
     $db = new User(); 
     $userObject = $db->getUser($username);
 
-/*     var_dump($userObject);
-    exit;
- */
-    //Se dados conferirem:
-    if($userObject->encPass == $encPass){
+    $dbEncriptedPass = $userObject->encPass;
+
+    if(password_verify($encPass,$dbEncriptedPass)){
       $authentic = true;
       return $authentic;
     }

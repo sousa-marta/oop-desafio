@@ -26,7 +26,10 @@ class User extends Conexao {
     //Traduzindo para Objeto:
     $userObject = $query->fetch(PDO::FETCH_OBJ);
 
+    //Está recebendo Post normalmente e transformando em objeto o username recebido
+/*     var_dump($_POST);
     var_dump($userObject);
+    exit; */
 
     //Retorna o objeto do usuário:
     return $userObject;

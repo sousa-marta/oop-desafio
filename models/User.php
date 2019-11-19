@@ -5,7 +5,7 @@ include_once "Conexao.php";
 class User extends Conexao {
 
   // Função para cadastrar novo usuário
-  public function addUser($firstName,$lastName,$username,$encPass){
+  public function setUser($firstName,$lastName,$username,$encPass){
 
     $db = parent::criarConexao();
     $query = $db->prepare("INSERT INTO users (firstName,lastName,username,encPass) 
@@ -17,14 +17,19 @@ class User extends Conexao {
       "encPass" => $encPass]);
   }
 
-  // Função para pegar ID do usuário e conferir se username e senha conferem no banco de dados:
-  public function getUserID($username,$encPass){
+  // Função para pegar ID do usuário se username e senha conferem no banco de dados:
+  public function getUser($username){
     $db = parent::criarConexao();
-    $query = $db->prepare("SELECT id FROM users WHERE username = ? and encPass = ?");
-    return $query->execute([$username,$encPass]);
+    $query = $db->prepare("SELECT * FROM users WHERE username = ?");
+    $query->execute([$username]);
 
-    //return se true, ótimo
+    //Traduzindo para Objeto:
+    $userObject = $query->fetch(PDO::FETCH_OBJ);
+
+    var_dump($userObject);
+
+    //Retorna o objeto do usuário:
+    return $userObject;
   }
-
 
 }

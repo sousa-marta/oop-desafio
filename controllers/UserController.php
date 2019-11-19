@@ -16,13 +16,23 @@ class UserController {
       break;
       case "login-user":
         $this->userLogin();
-      break;        
+      break;       
+      //Usando página para signIn, se for usar modal, não preciso dessa parte: 
+      case "sign-in":
+        $this->viewSignIn();
+      break;
     }
   }
   
   private function viewSignUp(){
     include "views/signUp.php";
   }
+
+  //Usando página para signIn, se for usar modal, não preciso dessa parte: 
+  private function viewSignIn(){
+    include "views/signIn.php";
+  }
+
   
   //Método para Registro de Usuário:
   private function registerUser(){

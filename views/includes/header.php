@@ -4,13 +4,20 @@
     <a class="navbar-brand" href="#"><img width="90" src="views/img/logo.png" alt="" srcset="">Instagram</a>
     <div>
       <a class="btn btn-signup" href="/oop-desafio/sign-up">Cadastre-se</a>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#login-modal" href="#">Login</button>
+      <a class="btn btn-signup" href="/oop-desafio/sign-in">Login</a>
+
+
+      <!-- Para utilizar com modal -->
+      <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#login-modal" href="#">Login</button> -->
+
     </div>
   </nav>
 </header>
 
 
 <!-- Modal de Login -->
+
+<!-- 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <dialog class="modal-content">
@@ -37,4 +44,5 @@
       </footer>
     </dialog>
   </div>
-</div>
+</div> 
+-->

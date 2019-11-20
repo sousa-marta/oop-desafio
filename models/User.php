@@ -17,7 +17,7 @@ class User extends Conexao {
       "encPass" => $encPass]);
   }
 
-  // Função para pegar ID do usuário se username e senha conferem no banco de dados:
+  // Função para pegar objeto de um usuário com todas informações que estão no banco de dados:
   public function getUser($username){
     $db = parent::criarConexao();
     $query = $db->prepare("SELECT * FROM users WHERE username = ?");

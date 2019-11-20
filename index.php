@@ -41,6 +41,11 @@
       $controller->acao($rotas);
     break;
 
+    case "logout":
+      include "controllers/UserController.php";
+      $controller = new UserController();
+      $controller->acao($rotas);
+
     //Usando página para signIn, se for usar modal, não preciso dessa parte: 
     case "sign-in":
       include "controllers/UserController.php";

@@ -1,11 +1,26 @@
+<?php
+
+  session_start();
+  //Recupera objeto com informações do usuário:
+  $user = isset($_SESSION["user"]) ? $_SESSION["user"] : [];
+
+?>
+
+
 <!-- Cabeçalho da Página -->
 <header>
   <nav class="navbar justify-content-between">
     <a class="navbar-brand" href="#"><img width="90" src="views/img/logo.png" alt="" srcset="">Instagram</a>
     <div>
-      <a class="btn btn-signup" href="/oop-desafio/sign-up">Cadastre-se</a>
-      <a class="btn btn-signup" href="/oop-desafio/sign-in">Login</a>
+      <?php if(isset($user) && $user != []){ ?>
+        Olá, <?= $user->firstName ?>
+        <a href="/oop-desafio/logout">Sair</a>
+      <?php }else { ?>
+        <a class="btn btn-signup" href="/oop-desafio/sign-up">Cadastre-se</a>
+        <a class="btn btn-signup" href="/oop-desafio/sign-in">Login</a>
+      <?php } ?>
 
+      
 
       <!-- Para utilizar com modal -->
       <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#login-modal" href="#">Login</button> -->
@@ -13,7 +28,6 @@
     </div>
   </nav>
 </header>
-
 
 <!-- Modal de Login -->
 

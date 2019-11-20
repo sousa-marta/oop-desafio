@@ -3,8 +3,6 @@
 include_once 'models/User.php';
 
 class UserController {
-  //Inicia como Deslogado:
-  // private $logged = false;
 
   public function acao($rotas){
     switch($rotas){
@@ -21,6 +19,9 @@ class UserController {
       case "sign-in":
         $this->viewSignIn();
       break;
+      case "logout":
+        $this->logout();
+      break;
     }
   }
   
@@ -33,7 +34,6 @@ class UserController {
     include "views/signIn.php";
   }
 
-  
   //Método para Registro de Usuário:
   private function registerUser(){
     $firstName = $_POST['firstName'];
@@ -66,27 +66,14 @@ class UserController {
 
       //Adiciona objeto com informações do usuário na sessão:
       $_SESSION['user'] = $action;
-
+      
       header('Location:/oop-desafio/posts');       
 
       return true;
     }else {
-      echo "inválido";
+      echo "Login ou senha inválidos";
       // return false;
     }
-    
-/*     if($action){
-      //Se verdadeiro, inicia uma sessão do usuário:
-      $_SESSION['username'] = $action->username;
-
-      var_dump($_SESSION['username']);
-      exit;
-
-      header('Location:/oop-desafio/posts');       
-      // return true;
-    }else {
-      echo "Login ou senha inválidos";
-    } */
   }
 
   private function authenticate ($username,$encPass){
@@ -102,7 +89,17 @@ class UserController {
     if(password_verify($encPass,$dbEncriptedPass)){
       $authentic = true;
       return $authentic;
+    }else {
+      return false;
     }
   }
+
+  private function logout(){
+    session_start();
+    session_destroy();
+    header('Location:/oop-desafio/posts');
+  }
+
+
 }
 

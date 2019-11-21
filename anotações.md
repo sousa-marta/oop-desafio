@@ -5,7 +5,7 @@ Usuário:senha || msousa:123
 
 
 2. Melhorar:
-- não permitir acessar página de login após logado;
+- 
 
 3. Opcionais:
 - botão de like;

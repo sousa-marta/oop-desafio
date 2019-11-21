@@ -41,15 +41,21 @@ class PostController {
   }
 
   private function cadastroPost(){
+    session_start();
+
     if(isset($_SESSION['user'])){
+      //Informações do Post
       $description = $_POST['description'];
       $nomeArquivo = $_FILES['image']['name'];
       $linkTemp = $_FILES['image']['tmp_name'];
       $caminhoSalvar = "views/img/$nomeArquivo";
       move_uploaded_file($linkTemp,$caminhoSalvar);
+
+      //Informações do Usuário:
+      $id_user = $_SESSION['user']->id;
   
       $post = new Post();
-      $resultado = $post->criarPost($caminhoSalvar,$description); //vai estar analisando um true or false
+      $resultado = $post->criarPost($caminhoSalvar,$description,$id_user); //true or false
   
       if($resultado){
         header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir
@@ -57,7 +63,7 @@ class PostController {
         echo "Deu erro";
       }
     } else {
-      header('Location:/oop-desafio/login-user'); //Retorna para página de login
+      header('Location:/oop-desafio/sign-in'); //Retorna para página de login
     }
   }
 

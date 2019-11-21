@@ -1,3 +1,14 @@
+<?php 
+
+include "views/includes/header.php"; 
+
+//Se o usuário já estiver logado, ele vai para página de posts (não tem como logar novamente):
+if(isset($_SESSION['user'])){
+  header('Location:/oop-desafio/posts');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,8 +20,6 @@
 	<link rel="stylesheet" href="views/css/styles.css">
 </head>
 <body>
-
-<?php include "views/includes/header.php"; ?>
 
 <main class="container">
   <form action="/oop-desafio/login-user" method="post" class="form-container">

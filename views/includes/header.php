@@ -10,7 +10,9 @@
 <!-- Cabeçalho da Página -->
 <header>
   <nav class="navbar justify-content-between">
-    <a class="navbar-brand" href="#"><img width="90" src="views/img/logo.png" alt="" srcset="">Instagram</a>
+    <a class="navbar-brand" href="/oop-desafio/posts">
+      <img width="90" src="views/img/logo.png" alt="" srcset="">Instagram
+    </a>
     <div>
       <?php if(isset($user) && $user != []){ ?>
         Olá, <?= $user->firstName ?>

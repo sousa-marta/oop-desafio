@@ -18,11 +18,8 @@ class Post extends Conexao {
     $db = parent::criarConexao();
     //Usando Inner Join para ao invés de usar ID da tabela posts, conseguir pegar o nome de usuário de quem postou;
     //Já faz o Select listando por ordem decrescente de id de post, do último postado para o primeiro:
-
     $query = $db->query('SELECT posts.id, users.username, users.firstName, users.lastName, posts.image, posts.description, posts.likes FROM posts INNER JOIN users ON posts.id_user=users.id ORDER BY posts.id DESC');
-
-    // $query = $db->query('SELECT * FROM posts ORDER BY id DESC');//pra trazer em ordem decrescente
-    
+ 
     $resultado = $query->fetchAll(PDO::FETCH_OBJ); //traduzindo tudo que recebe para um formato que o php entenda. Nesse caso escolhemos receber objeto.
     return $resultado;
   } 

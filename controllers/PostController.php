@@ -16,6 +16,9 @@ class PostController {
       case "cadastrar-post":
         $this->cadastroPost();
       break;
+      case "like":
+        $this->like($postId);
+      break;
     }
   }
 
@@ -65,6 +68,17 @@ class PostController {
     } else {
       header('Location:/oop-desafio/sign-in'); //Retorna para página de login
     }
+  }
+
+  private function like($postId){
+    //verificar se está em session;
+    //se estiver, verificar se usuário não deu like antes;
+
+    //se tudo ok, acrescentar +1 no likes do post (para isso, pega quantos tem no momento e devolve acrescentando +1);
+    $post = new Post();
+    $getLikes = $post->getLikes($postId);
+    $addLike = $getLikes + 1;
+    return $addLike;
   }
 
 }

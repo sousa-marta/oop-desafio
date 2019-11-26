@@ -13,6 +13,7 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="views/css/styles.css">
 </head>
 <body>
@@ -30,6 +31,11 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 					<p class="card-text">
 						<?php echo "Usuário: $post->username"; ?>
 					</p>
+					<p class="card-text">
+						<?php echo "Likes: $post->likes"; ?>
+					</p>
+					<!-- Colocar de forma que só aparece quando estiver logado -->
+					<a class="fa" href="/oop-desafio/like"> &#xf164<a>
 				</div>
 			</div>
 		<?php endforeach; ?>

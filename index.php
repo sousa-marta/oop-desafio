@@ -5,6 +5,7 @@
 
   //Decidir qual controller utilizar:
   switch($rotas){
+    // Posts Controlers:
     case "posts":
       include "controllers/PostController.php";
       $controller = new PostController();
@@ -23,6 +24,12 @@
       $controller->acao($rotas);
     break;
 
+    case "like":
+      include "controllers/PostController.php";
+      $controller = new PostController();
+      $controller->acao($rotas);
+
+    // Users Controlers:
     case "sign-up":
       include "controllers/UserController.php";
       $controller = new UserController();

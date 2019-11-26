@@ -23,4 +23,12 @@ class Post extends Conexao {
     $resultado = $query->fetchAll(PDO::FETCH_OBJ); //traduzindo tudo que recebe para um formato que o php entenda. Nesse caso escolhemos receber objeto.
     return $resultado;
   } 
+
+  //Pegando quantos likes tem determinado Post
+  public function getLikes($postId){
+    $db = parent::criarConexao();
+    $query = $db->query('SELECT likes FROM posts WHERE id = $postId');
+    $result = $query->fetch(PDO::FETCH_OBJ);
+    return $result;
+  }
 }

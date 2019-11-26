@@ -25,7 +25,10 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 				<img id="cardimg" src="<?php echo $post->image; ?>" alt="Card image cap">
 				<div class="card-body">
 					<p class="card-text">
-						<?php echo $post->description; ?>
+						<?php echo "Descrição: $post->description"; ?>
+					</p>
+					<p class="card-text">
+						<?php echo "Usuário: $post->username"; ?>
 					</p>
 				</div>
 			</div>

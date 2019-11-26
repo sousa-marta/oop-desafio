@@ -20,7 +20,12 @@ class PostController {
   }
 
   private function viewFormularioPost(){
-    include "views/newPost.php";
+    session_start();
+    if(isset($_SESSION['user'])){
+      include "views/newPost.php";
+    }else {
+      header('Location:/oop-desafio/sign-in'); //Retorna para página de login
+    }
   }
 
   private function viewPosts(){
@@ -36,19 +41,29 @@ class PostController {
   }
 
   private function cadastroPost(){
-    $description = $_POST['description'];
-    $nomeArquivo = $_FILES['image']['name'];
-    $linkTemp = $_FILES['image']['tmp_name'];
-    $caminhoSalvar = "views/img/$nomeArquivo";
-    move_uploaded_file($linkTemp,$caminhoSalvar);
+    session_start();
 
-    $post = new Post();
-    $resultado = $post->criarPost($caminhoSalvar,$description); //vai estar analisando um true or false
+    if(isset($_SESSION['user'])){
+      //Informações do Post
+      $description = $_POST['description'];
+      $nomeArquivo = $_FILES['image']['name'];
+      $linkTemp = $_FILES['image']['tmp_name'];
+      $caminhoSalvar = "views/img/$nomeArquivo";
+      move_uploaded_file($linkTemp,$caminhoSalvar);
 
-    if($resultado){
-      header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir
-    }else {
-      echo "Deu erro";
+      //Informações do Usuário:
+      $id_user = $_SESSION['user']->id;
+  
+      $post = new Post();
+      $resultado = $post->criarPost($caminhoSalvar,$description,$id_user); //true or false
+  
+      if($resultado){
+        header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir
+      }else {
+        echo "Deu erro";
+      }
+    } else {
+      header('Location:/oop-desafio/sign-in'); //Retorna para página de login
     }
   }
 

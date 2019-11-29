@@ -22,8 +22,8 @@ if(isset($_SESSION['user'])){
 <body>
 
 <main class="container">
-  <div class="row">
-    <section class="col-md-6">
+  <div class="row justify-content-center">
+    <section class="col-md-5">
       <img class="signIn-image" src="views/img/insta-index.png" alt="celular com Instagram aberto">
     </section>
   

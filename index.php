@@ -1,7 +1,7 @@
 <?php 
 
   //Se não tiver nada pra cadastrar, vai para lista de posts:
-  $rotas = key($_GET)?key($_GET):"posts";
+  $rotas = key($_GET)?key($_GET):"sign-in";
 
   //Decidir qual controller utilizar:
   switch($rotas){

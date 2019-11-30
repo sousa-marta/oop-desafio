@@ -1,6 +1,6 @@
 <?php 
 
-include "views/includes/header.php"; 
+// include "views/includes/header.php"; 
 
 //Se o usuário já estiver logado, ele vai para página de posts (não tem como logar novamente):
 if(isset($_SESSION['user'])){
@@ -22,20 +22,37 @@ if(isset($_SESSION['user'])){
 <body>
 
 <main class="container">
-  <form action="/oop-desafio/login-user" method="post" class="form-container">
-    <div class="col-6">
-      <h3>Login</h3>
-      <div class="form-group">
-        <label for="userId">Usuário</label>
-        <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Usuário" required>
-      </div>
-      <div class="form-group">
-        <label for="userPass">Senha</label>
-        <input name="userPass" type="password" class="form-control" id="userPass" placeholder="Senha" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Logar</button>
+  <div class="row justify-content-center">
+    <section class="col-md-5">
+      <img class="signIn-image" src="views/img/insta-index.png" alt="celular com Instagram aberto">
+    </section>
+  
+    <div class="col-md-5">
+      <!-- Formulário de Login ou link para cadastrar -->
+      <section>
+        <form action="/oop-desafio/login-user" method="post" class="form-container">
+          <div class="form-signin col-10">
+            <h3 class="text-center">Instagram</h3>
+            <div class="form-group">
+              <input name="username" type="text" class="form-control" id="userId" aria-describedby="emailHelp" placeholder="Usuário" required>
+            </div>
+            <div class="form-group">
+              <input name="userPass" type="password" class="form-control" id="userPass" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Logar</button>
+          </div>
+        </form>
+      </section>
+    
+      <!-- Link para cadastrar -->
+      <section>
+        <div class="signUp-container mt-3">
+          <p>Não tem um conta?</p>
+          <a href="/oop-desafio/sign-up">Cadastre-se</a>
+        </div>
+      </section>
     </div>
-  </form>
+    </div>
 </main>
 </body>
 </html>

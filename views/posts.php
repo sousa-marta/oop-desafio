@@ -23,18 +23,19 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 	<main class="board">
 		<?php foreach($posts as $post): ?>
 			<div class="card mt-5">
+				<div class="user-post">
+					<p class="m-0 ml-3 py-2 font-weight-bold">
+						<?php echo "$post->username"; ?>
+					</p>
+				</div>
 				<img id="cardimg" src="<?php echo $post->image; ?>" alt="Card image cap">
 				<div class="card-body">
 					<p class="card-text">
 						<?php echo "Descrição: $post->description"; ?>
 					</p>
 					<p class="card-text">
-						<?php echo "Usuário: $post->username"; ?>
-					</p>
-					<p class="card-text">
 						<?php echo "Likes: $post->likes"; ?>
 					</p>
-					<!-- Colocar de forma que só aparece quando estiver logado -->
 					<a class="fa" href="/oop-desafio/like"> &#xf164<a>
 				</div>
 			</div>

@@ -13,9 +13,6 @@ https://fontawesome.com/icons/thumbs-up?style=regular
 
 
 2. Melhorar:
-- assim que cadastrar, já considera logado, já inicia sessão;
-- colocar novamente modal para login;
-
 
 
 DÚVIDAS:

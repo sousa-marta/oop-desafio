@@ -46,7 +46,18 @@ class UserController {
     
     if($action){
       // echo "Adicionado com sucesso";
-      header('Location:/oop-desafio/posts'); 
+      $username = $_POST['username'];
+      session_start();
+
+      //Pega dados do usuário:
+      $user = new User();
+      $action = $user->getUser($username);
+
+      //Adiciona objeto com informações do usuário na sessão:
+      $_SESSION['user'] = $action;
+      
+      header('Location:/oop-desafio/posts');       
+
     }else {
       echo "Não foi possível adicionar o usuário - usuário já cadastrado.";
     }
@@ -97,7 +108,7 @@ class UserController {
   private function logout(){
     session_start();
     session_destroy();
-    header('Location:/oop-desafio/posts');
+    header('Location:/oop-desafio/');
   }
 
 

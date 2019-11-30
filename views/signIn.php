@@ -1,6 +1,6 @@
 <?php 
 
-include "views/includes/header.php"; 
+// include "views/includes/header.php"; 
 
 //Se o usuário já estiver logado, ele vai para página de posts (não tem como logar novamente):
 if(isset($_SESSION['user'])){
@@ -27,7 +27,7 @@ if(isset($_SESSION['user'])){
       <img class="signIn-image" src="views/img/insta-index.png" alt="celular com Instagram aberto">
     </section>
   
-    <div class="col-md-6">
+    <div class="col-md-5">
       <!-- Formulário de Login ou link para cadastrar -->
       <section>
         <form action="/oop-desafio/login-user" method="post" class="form-container">
@@ -46,7 +46,7 @@ if(isset($_SESSION['user'])){
     
       <!-- Link para cadastrar -->
       <section>
-        <div class="signUp-container">
+        <div class="signUp-container mt-3">
           <p>Não tem um conta?</p>
           <a href="/oop-desafio/sign-up">Cadastre-se</a>
         </div>

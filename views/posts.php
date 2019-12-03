@@ -30,13 +30,23 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 				</div>
 				<img id="cardimg" src="<?php echo $post->image; ?>" alt="Card image cap">
 				<div class="card-body">
-					<p class="card-text">
-						<?php echo "Descrição: $post->description"; ?>
-					</p>
-					<p class="card-text">
-						<?php echo "Likes: $post->likes"; ?>
-					</p>
-					<a class="fa" href="/oop-desafio/like"> &#xf164<a>
+					<div>
+						<p class="d-sm-inline-block">
+							<a class="fa" href="/oop-desafio/like"> &#xf004<a>
+						</p>
+						<p class="d-sm-inline-block">
+							<?= "Curtidas: $post->likes"; ?>
+						</p>
+					</div>
+
+					<div class="flex-row">
+						<p class="font-weight-bold d-sm-inline-block">
+							<?= $post->username; ?>
+						</p>
+						<p class="d-sm-inline-block">
+							<?= $post->description; ?>
+						</p>					
+					</div>
 				</div>
 			</div>
 		<?php endforeach; ?>

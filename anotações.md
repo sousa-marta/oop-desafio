@@ -9,7 +9,7 @@ Usuário:senha || msousa:123
 Done: 
 - model getLikes; 
 
-https://fontawesome.com/icons/thumbs-up?style=regular
+https://fontawesome.com/icons/heart?style=regular
 
 
 2. Melhorar:

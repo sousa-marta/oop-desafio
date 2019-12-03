@@ -17,7 +17,7 @@ class PostController {
         $this->cadastroPost();
       break;
       case "like":
-        $this->like($postId);
+        echo "Funcionalidade indisponível";
       break;
     }
   }

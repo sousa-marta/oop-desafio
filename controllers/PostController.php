@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
 include_once "models/Post.php";
 
 class PostController {
@@ -23,7 +23,7 @@ class PostController {
   }
 
   private function viewFormularioPost(){
-    session_start();
+
     if(isset($_SESSION['user'])){
       include "views/newPost.php";
     }else {
@@ -44,7 +44,7 @@ class PostController {
   }
 
   private function cadastroPost(){
-    session_start();
+  
 
     if(isset($_SESSION['user'])){
       //Informações do Post

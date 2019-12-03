@@ -1,6 +1,6 @@
 <?php
 
-  session_start();
+  // session_start();
   //Recupera objeto com informações do usuário:
   $user = isset($_SESSION["user"]) ? $_SESSION["user"] : [];
 

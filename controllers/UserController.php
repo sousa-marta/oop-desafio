@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once 'models/User.php';
 
 class UserController {
@@ -47,7 +47,7 @@ class UserController {
     if($action){
       // echo "Adicionado com sucesso";
       $username = $_POST['username'];
-      session_start();
+ 
 
       //Pega dados do usuário:
       $user = new User();
@@ -70,7 +70,7 @@ class UserController {
     
     //Checando com banco de dados, se ok, iniciar sessão:
     if($this->authenticate($username,$encPass)){
-      session_start();
+     
       //Pega dados do usuário:
       $user = new User();
       $action = $user->getUser($username);
@@ -106,7 +106,7 @@ class UserController {
   }
 
   private function logout(){
-    session_start();
+
     session_destroy();
     header('Location:/oop-desafio/');
   }

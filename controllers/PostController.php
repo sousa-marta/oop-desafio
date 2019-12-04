@@ -70,7 +70,7 @@ class PostController {
     }
   }
 
-  private function like($postId){
+  /*private function like($postId){
     //verificar se está em session;
     //se estiver, verificar se usuário não deu like antes;
 
@@ -78,8 +78,8 @@ class PostController {
     $post = new Post();
     $getLikes = $post->getLikes($postId);
     $addLike = $getLikes + 1;
-    return $addLike;
-  }
+    return $addLike; 
+  } */
 
 }
 

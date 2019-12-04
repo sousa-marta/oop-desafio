@@ -106,7 +106,6 @@ class UserController {
   }
 
   private function logout(){
-
     session_destroy();
     header('Location:/oop-desafio/');
   }

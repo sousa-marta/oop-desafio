@@ -1,7 +1,5 @@
 <?php 
 
-// include "views/includes/header.php"; 
-
 //Se o usuário já estiver logado, ele vai para página de posts (não tem como logar novamente):
 if(isset($_SESSION['user'])){
   header('Location:/oop-desafio/posts');

@@ -6,11 +6,6 @@ Usuário:senha || msousa:123
 
 - se session iniciada aparece botão de curtir / só permite curtir quem estiver logado;
 
-Done: 
-- model getLikes; 
-
-https://fontawesome.com/icons/heart?style=regular
-
 
 2. Melhorar:
 

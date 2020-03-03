@@ -7,9 +7,5 @@ Usuário:senha || msousa:123
 - se session iniciada aparece botão de curtir / só permite curtir quem estiver logado;
 
 
-2. Melhorar:
-
-
-DÚVIDAS:
-
-- Como que passo o id do post em questão para somar +1 no número de likes do post em questão?
+-------------
+Se no LINUX, a pasta no htdocs tem que estar com acesso para permitir salvar imagem (sudo chmod -R 777 <nomePastaProjeto>)

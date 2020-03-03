@@ -12,11 +12,8 @@ CREATE TABLE users (
 CREATE TABLE posts (
 	id INT PRIMARY KEY AUTO_INCREMENT,
     image VARCHAR(500) NOT NULL,
-	description VARCHAR(500) NOT NULL
+	description VARCHAR(500) NOT NULL,
+    likes INT DEFAULT (0),
     id_user INT NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id) 
-    
-    /* APÓS CRIADOS ESSES ITENS, INSERIR NA TABELA*/
-    /*,likes INT DEFAULT (0), */
-    
 );

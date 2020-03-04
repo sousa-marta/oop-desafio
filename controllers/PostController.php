@@ -23,11 +23,10 @@ class PostController {
   }
 
   private function viewFormularioPost(){
-
     if(isset($_SESSION['user'])){
       include "views/newPost.php";
     }else {
-      header('Location:/oop-desafio/sign-in'); //Retorna para página de login
+      header('Location:/oop-desafio-fake-insta/sign-in'); //Retorna para página de login
     }
   }
 
@@ -44,8 +43,6 @@ class PostController {
   }
 
   private function cadastroPost(){
-  
-
     if(isset($_SESSION['user'])){
       //Informações do Post
       $description = $_POST['description'];
@@ -56,17 +53,17 @@ class PostController {
 
       //Informações do Usuário:
       $id_user = $_SESSION['user']->id;
-  
+
       $post = new Post();
       $resultado = $post->criarPost($caminhoSalvar,$description,$id_user); //true or false
-  
+
       if($resultado){
-        header('Location:/oop-desafio/posts'); //mandando para a rota decidir para onde ir
+        header('Location:/oop-desafio-fake-insta/posts'); //mandando para a rota decidir para onde ir
       }else {
         echo "Deu erro";
       }
     } else {
-      header('Location:/oop-desafio/sign-in'); //Retorna para página de login
+      header('Location:/oop-desafio-fake-insta/sign-in'); //Retorna para página de login
     }
   }
 

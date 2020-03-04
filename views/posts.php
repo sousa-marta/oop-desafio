@@ -32,7 +32,7 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 				<div class="card-body">
 					<div>
 						<p class="d-sm-inline-block">
-							<a class="fa" href="/oop-desafio/like"> &#xf004<a>
+							<a class="fa" href="/oop-desafio-fake-insta/like"> &#xf004<a>
 						</p>
 						<p class="d-sm-inline-block">
 							<?= "Curtidas: $post->likes"; ?>
@@ -51,7 +51,7 @@ $posts = $_REQUEST['posts']; // pegando informações que estão sendo colocados
 				</div>
 			</div>
 		<?php endforeach; ?>
-		<a class="float-button" href="/oop-desafio/formulario-post">&#10010;</a>
+		<a class="float-button" href="/oop-desafio-fake-insta/formulario-post">&#10010;</a>
 	</main>
     
 

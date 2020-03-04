@@ -4,7 +4,7 @@ include "views/includes/header.php";
 
 //Se o usuário já estiver logado, ele vai para página de posts (não tem como tentar cadastrar novamente):
 if(isset($_SESSION['user'])){
-  header('Location:/oop-desafio/posts');
+  header('Location:/oop-desafio-fake-insta/posts');
 }
 
 ?>
@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])){
 <body>
 
 <main class="container">
-  <form action="/oop-desafio/register-user" method="post" class="form-container">
+  <form action="/oop-desafio-fake-insta/register-user" method="post" class="form-container">
     <div class="col-10">
       <h3>Cadastre-se</h3>
       <div class="form-group">

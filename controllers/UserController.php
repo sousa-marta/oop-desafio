@@ -56,7 +56,7 @@ class UserController {
       //Adiciona objeto com informações do usuário na sessão:
       $_SESSION['user'] = $action;
       
-      header('Location:/oop-desafio/posts');       
+      header('Location:/oop-desafio-fake-insta/posts');       
 
     }else {
       echo "Não foi possível adicionar o usuário - usuário já cadastrado.";
@@ -78,7 +78,7 @@ class UserController {
       //Adiciona objeto com informações do usuário na sessão:
       $_SESSION['user'] = $action;
       
-      header('Location:/oop-desafio/posts');       
+      header('Location:/oop-desafio-fake-insta/posts');       
 
       return true;
     }else {
@@ -107,7 +107,7 @@ class UserController {
 
   private function logout(){
     session_destroy();
-    header('Location:/oop-desafio/');
+    header('Location:/oop-desafio-fake-insta/');
   }
 
 

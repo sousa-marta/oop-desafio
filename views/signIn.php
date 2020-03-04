@@ -2,7 +2,7 @@
 
 //Se o usuário já estiver logado, ele vai para página de posts (não tem como logar novamente):
 if(isset($_SESSION['user'])){
-  header('Location:/oop-desafio/posts');
+  header('Location:/oop-desafio-fake-insta/posts');
 }
 
 ?>
@@ -28,7 +28,7 @@ if(isset($_SESSION['user'])){
     <div class="col-md-5">
       <!-- Formulário de Login ou link para cadastrar -->
       <section>
-        <form action="/oop-desafio/login-user" method="post" class="form-container">
+        <form action="/oop-desafio-fake-insta/login-user" method="post" class="form-container">
           <div class="form-signin col-10">
             <h3 class="text-center">Instagram</h3>
             <div class="form-group">
@@ -46,11 +46,11 @@ if(isset($_SESSION['user'])){
       <section>
         <div class="signUp-container mt-3">
           <p>Não tem um conta?</p>
-          <a href="/oop-desafio/sign-up">Cadastre-se</a>
+          <a href="/oop-desafio-fake-insta/sign-up">Cadastre-se</a>
         </div>
       </section>
     </div>
-    </div>
+  </div>
 </main>
 </body>
 </html>

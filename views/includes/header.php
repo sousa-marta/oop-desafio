@@ -10,16 +10,16 @@
 <!-- Cabeçalho da Página -->
 <header>
   <nav class="navbar justify-content-between">
-    <a class="navbar-brand" href="/oop-desafio/posts">
+    <a class="navbar-brand" href="/oop-desafio-fake-insta/posts">
       <img width="90" src="views/img/logo.png" alt="" srcset="">Instagram
     </a>
     <div>
       <?php if(isset($user) && $user != []){ ?>
         Olá, <?= $user->firstName ?>
-        <a href="/oop-desafio/logout">Sair</a>
+        <a href="/oop-desafio-fake-insta/logout">Sair</a>
       <?php }else { ?>
-        <a class="btn btn-signup" href="/oop-desafio/sign-up">Cadastre-se</a>
-        <a class="btn btn-signup" href="/oop-desafio/sign-in">Login</a>
+        <a class="btn btn-signup" href="/oop-desafio-fake-insta/sign-up">Cadastre-se</a>
+        <a class="btn btn-signup" href="/oop-desafio-fake-insta/sign-in">Login</a>
       <?php } ?>
 
       
@@ -44,7 +44,7 @@
         </button>
       </header>
       <main class="modal-body">
-        <form action="/oop-desafio/login-user" method="post">
+        <form action="/oop-desafio-fake-insta/login-user" method="post">
           <div class="form-group">
             <label for="username">Nome de Usuário</label>
             <input type="email" class="form-control"  name="username" id="username" placeholder="Insira seu nome de usuário" required>
